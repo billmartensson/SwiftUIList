@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		AB5DCF2C25666D080016C4CA /* FruitRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DCF2B25666D080016C4CA /* FruitRowView.swift */; };
 		AB5DCF2F256690CA0016C4CA /* FirebaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DCF2E256690CA0016C4CA /* FirebaseView.swift */; };
 		AB5DCF32256691BC0016C4CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB5DCF31256691BC0016C4CA /* GoogleService-Info.plist */; };
+		AB5DCF442566A48F0016C4CA /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DCF432566A48F0016C4CA /* PersonDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		AB5DCF2B25666D080016C4CA /* FruitRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitRowView.swift; sourceTree = "<group>"; };
 		AB5DCF2E256690CA0016C4CA /* FirebaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseView.swift; sourceTree = "<group>"; };
 		AB5DCF31256691BC0016C4CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AB5DCF432566A48F0016C4CA /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
 		E3C05FC3120FCA2F39C5AEB9 /* Pods_SwiftUIList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -50,7 +52,6 @@
 				537A2C9D6D581A101281B517 /* Pods-SwiftUIList.debug.xcconfig */,
 				A29059BC176B5A2D1E99B300 /* Pods-SwiftUIList.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,6 +88,7 @@
 				AB5DCF1B256662300016C4CA /* SwiftUIListApp.swift */,
 				AB5DCF1D256662300016C4CA /* ContentView.swift */,
 				AB5DCF2E256690CA0016C4CA /* FirebaseView.swift */,
+				AB5DCF432566A48F0016C4CA /* PersonDetailView.swift */,
 				AB5DCF2B25666D080016C4CA /* FruitRowView.swift */,
 				AB5DCF1F256662310016C4CA /* Assets.xcassets */,
 				AB5DCF24256662310016C4CA /* Info.plist */,
@@ -219,6 +221,7 @@
 			files = (
 				AB5DCF1E256662300016C4CA /* ContentView.swift in Sources */,
 				AB5DCF2F256690CA0016C4CA /* FirebaseView.swift in Sources */,
+				AB5DCF442566A48F0016C4CA /* PersonDetailView.swift in Sources */,
 				AB5DCF1C256662300016C4CA /* SwiftUIListApp.swift in Sources */,
 				AB5DCF2C25666D080016C4CA /* FruitRowView.swift in Sources */,
 			);

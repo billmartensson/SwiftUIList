@@ -26,43 +26,49 @@ struct FirebaseView: View {
     
     
     var body: some View {
-        VStack {
-            TextField("Namn", text: $textfield_name).padding()
+        
+        
+            VStack {
+                TextField("Namn", text: $textfield_name).padding()
 
-            HStack {
-                
-                TextField("Efternamn", text: $textfield_lastname)
-                
-                Button(action: {
-                    
-                    let ref = Database.database().reference()
-                    
-                    ref.child("swiftuitest").childByAutoId().setValue(["name": textfield_name, "lastname": textfield_lastname])
-                    
-                    textfield_name = ""
-                    textfield_lastname = ""
-                    loadPeople()
-                    
-                }) {
-                    Text("Lägg till")
-                }
-                
-            }.padding()
-            
-            
-            List(people) { currentperson in
                 HStack {
-                    Text(currentperson.firstname)
-                    Text(currentperson.lastname)
-                }
+                    
+                    TextField("Efternamn", text: $textfield_lastname)
+                    
+                    Button(action: {
+                        
+                        let ref = Database.database().reference()
+                        
+                        ref.child("swiftuitest").childByAutoId().setValue(["name": textfield_name, "lastname": textfield_lastname])
+                        
+                        textfield_name = ""
+                        textfield_lastname = ""
+                        loadPeople()
+                        
+                    }) {
+                        Text("Lägg till")
+                    }
+                    
+                }.padding()
                 
+                NavigationView {
+                    List(people) { currentperson in
+                        
+                        NavigationLink(destination: PersonDetailView(detailperson: currentperson))
+                        {
+                            HStack {
+                                Text(currentperson.firstname)
+                                Text(currentperson.lastname)
+                            }
+                        }
+                    }
+                
+                }
             }
-            
-        }
-        .onAppear() {
-            loadPeople()
-        }
-    } // SLUT AV BODY
+            .onAppear() {
+                loadPeople()
+            }
+        } // SLUT AV BODY
     
     func loadPeople()
     {
